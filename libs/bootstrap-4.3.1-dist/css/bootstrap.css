@@ -1995,7 +1995,7 @@ textarea.form-control {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .form-text {
@@ -2330,8 +2330,8 @@ textarea.form-control {
     flex: 0 0 auto;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-flex-align: top;
+    align-items: top;
     margin-bottom: 0;
   }
   .form-inline .form-control {

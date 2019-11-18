@@ -14,9 +14,11 @@
 
 	<!-- Syles -->
 	<link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
+	<link rel="stylesheet" href="libs/owlcarousel/owl.carousel.css">
+	<link rel="stylesheet" href="libs/owlcarousel/owl.theme.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<!-- FavIcons -->
@@ -36,16 +38,20 @@
 	<![endif]-->
 
 	<!-- Header -->
-	<header class="header container">
+	<header class="header">
 		<!-- header__navigation -->
-		<nav class="header__navigation-wraper clearfix">
-			<div class="header__navigation-logo">
+		<nav class="navigation clearfix">
+
+			<div class="header__navigation-logo clearfix">
 				<ul>
 					<li class="ex">ex</li>
 					<li class="plore">plore</li>
 				</ul>
 			</div>
-			<div class="header__navigation-list">
+
+			<div id="navigation-toggle" class="navigation__toggle-button">explore</div>
+
+			<div class="navigation-list">
 				<ul>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Mens</a></li>
@@ -54,25 +60,26 @@
 					<li><a href="#">Blog</a></li>
 				</ul>
 			</div>
-
+			
+		
 			<div class="header__navigation-busket clearfix">
 				<i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
 				<div class="btn-group">
-						<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  My account
-						</button>
-						<div class="dropdown-menu">
-						  <a class="dropdown-item" href="#">Action</a>
-						  <a class="dropdown-item" href="#">Another action</a>
-						  <a class="dropdown-item" href="#">Something else here</a>
-						  <div class="dropdown-divider"></div>
-						  <a class="dropdown-item" href="#">Separated link</a>
-						</div>
-					  </div>
+					<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						My account
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Separated link</a>
+					</div>
+				</div>
 			</div>
 
 		</nav>
-		<!--// header__navigation -->
+		<!--//navigation -->
 
 		<!-- header__content -->
 		<div class="header__content">
@@ -92,8 +99,517 @@
 		</div>
 		<!-- //header__content -->
 	</header>
-	<!-- // Header -->
+	<!-- //header -->
 
+	<!-- products -->
+	<div class="products">
+		<!-- featured-items -->
+		<div class="featured-items">
+			<div class="products-block__header">
+				<h3 class="heading">Featured Items</h3>
+				<p class="heading__subtext">Let’s see featured items!</p>
+			</div>
+			<!-- container -->
+			<div class="container clearfix">
+				<div class="owl-carusel" id="owl-carusel">
+
+					<!-- card 1 -->
+					<div class="featured-items__card clearfix">
+						<div>
+							<img src="/img/items/bag.png" alt="коричневая сумка мужская">
+						</div>
+						
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+
+						<div class="featured-items__card-stars clearfix">
+							<fieldset class="rating">
+								<input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								<input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								<input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								<input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								<input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+							</fieldset>
+						</div>
+						<!-- // featured-items__card-stars -->
+
+						<p class="product-block__card-price">$ 255</p>
+
+					</div>
+					<!-- // card 1 -->
+		
+					<!-- card 2 -->
+					<div class="featured-items__card clearfix">
+
+						<img src="/img/items/watch.png" alt="часы">
+
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+
+						<div class="featured-items__card-stars clearfix">
+							<fieldset class="rating">
+								<input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+								<input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+								<input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+								<input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+								<input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+								<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+							</fieldset>
+						</div>
+						<!-- // featured-items__card-stars -->
+
+						<p class="product-block__card-price">$ 255</p>
+
+					</div>
+					<!-- // card 2 -->
+
+					<!-- card 3 -->
+					<div class="featured-items__card clearfix">
+				
+						<img src="/img/items/redbag.png" alt="красная женская сумка">
+				
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+				
+						<div class="featured-items__card-stars clearfix">
+							<fieldset class="rating">
+								<input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
+									title="Awesome - 5 stars"></label>
+								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half"
+									for="star4half" title="Pretty good - 4.5 stars"></label>
+								<input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"
+									title="Pretty good - 4 stars"></label>
+								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half"
+									for="star3half" title="Meh - 3.5 stars"></label>
+								<input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"
+									title="Meh - 3 stars"></label>
+								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half"
+									for="star2half" title="Kinda bad - 2.5 stars"></label>
+								<input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
+									title="Kinda bad - 2 stars"></label>
+								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half"
+									for="star1half" title="Meh - 1.5 stars"></label>
+								<input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
+									title="Sucks big time - 1 star"></label>
+								<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"
+									title="Sucks big time - 0.5 stars"></label>
+							</fieldset>
+						</div>
+						<!-- // featured-items__card-stars -->
+
+						<p class="product-block__card-price">$ 255</p>
+				
+					</div>
+					<!-- // card 3 -->
+
+					<!-- card 3 -->
+					<div class="featured-items__card clearfix">
+					
+						<img src="/img/items/shoe.png" alt="чёрные кеды">
+					
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+					
+						<div class="featured-items__card-stars clearfix">
+							<fieldset class="rating">
+								<input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
+									title="Awesome - 5 stars"></label>
+								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"
+									title="Pretty good - 4.5 stars"></label>
+								<input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"
+									title="Pretty good - 4 stars"></label>
+								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"
+									title="Meh - 3.5 stars"></label>
+								<input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"
+									title="Meh - 3 stars"></label>
+								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"
+									title="Kinda bad - 2.5 stars"></label>
+								<input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
+									title="Kinda bad - 2 stars"></label>
+								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"
+									title="Meh - 1.5 stars"></label>
+								<input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
+									title="Sucks big time - 1 star"></label>
+								<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"
+									title="Sucks big time - 0.5 stars"></label>
+							</fieldset>
+						</div>
+						<!-- // featured-items__card-stars -->
+					
+						<p class="product-block__card-price">$ 255</p>
+					
+					</div>
+					<!-- // card 3 -->
+				</div>
+			</div>
+			<!-- // container -->
+		</div>
+		<!--// featured-items -->
+
+
+		<!-- products-collections -->
+		<div class="products-collections">
+
+			<div class="products-block__header">
+				<h3 class="heading">Products Collections</h3>
+				<p class="heading__subtext">Check out popular products in our shop!</p>
+			</div>
+			
+			<ul class="products-block__header">
+				
+				<ul class="product__collections-filter">
+					<li class="product__collections-filter-item">
+						all
+					</li>
+					<li class="product__collections-filter-item">
+						mens
+					</li>
+					<li class="product__collections-filter-item">
+						women
+					</li>
+					<li class="product__collections-filter-item">
+						kids	
+					</li>
+				</ul>
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row clearfix">
+					<!-- card 1 -->
+					<div class="products-collections__card col-md-4 clearfix">
+						<img src="img/items/grayjacket.png" alt="серая куртка">
+						<a href="#" class="add-to-card">add to card</a>
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
+						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+					</div>
+					<!-- // card 1 -->
+
+					<!-- card 2 -->
+					<div class="products-collections__card col-md-4 clearfix ">
+						<img src="img/items/redbag.png" alt="крассная женская сумка">
+						<a href="#" class="add-to-card">add to card</a>
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
+						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+					</div>
+					<!-- // card 2 -->
+
+					<!-- card 3 -->
+					<div class="products-collections__card col-md-4 clearfix ">
+						<img src="img/items/bluejacket.png" alt="синяя куртка">
+						<a href="#" class="add-to-card">add to card</a>
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
+						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+					</div>
+					<!-- // card 3 -->
+
+				</div>
+				<!-- // row -->
+
+				<!-- row -->
+				<div class="row clearfix">
+					<!-- card 1 -->
+					<div class="products-collections__card col-md-4 clearfix ">
+						<img src="img/items/watchyellow.png" alt="часы с рыжим ремешком">
+						<a href="#" class="add-to-card">add to card</a>
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
+						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+					</div>
+					<!-- // card 1 -->
+				
+					<!-- card 2 -->
+					<div class="products-collections__card col-md-4 clearfix ">
+						<img src="img/items/belt.png" alt="коричневый ремень">
+						<a href="#" class="add-to-card">add to card</a>
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
+						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+					</div>
+					<!-- // card 2 -->
+				
+					<!-- card 3 -->
+					<div class="products-collections__card col-md-4 clearfix ">
+						<img src="img/items/shoe.png" alt="черные кеды">
+						<a href="#" class="add-to-card">add to card</a>
+						<div class="product-block__card-tittle">
+							<h1>Vaber Jinish Very Stylish</h1>
+						</div>
+						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
+						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+					</div>
+					<!-- // card 3 -->
+				
+				</div>
+				<!-- // row -->
+				<div class="row justify-content-center">
+					<button type="button" class="btn btn-outline-secondary product-collections__button">More</button>
+				</div>
+
+			</div>
+			<!-- // container -->
+		</div>
+		<!-- // products-collections -->
+	</div>
+	<!--// products -->
+	 
+	<!-- subscribe-form -->
+	<div class="subscribe-form">
+
+		<div class="subscribe-form__header">
+			<div class="heading">Subscribe To Our Newsletter</div>
+			<div class="heading__subtext">Only our latest news to send your email address</div>
+		</div>
+		
+
+		<div class="input-group mb-3">
+
+			<div class="subscribe-form__button">
+
+				<input type="text" class="form-control subscribe-form__button-text" placeholder="Enter your email address" aria-label="user email"
+					aria-describedby="button-addon2">
+				
+				<div class="input-group-append subscribe-form__button">
+					<button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- // subscribe-form -->
+
+	<!-- news -->
+
+	<div class="news">
+		
+		<div class="products-block__header">
+			<h3 class="heading">Latest New’s</h3>
+			<p class="heading__subtext">Read latests new’s in our blog</p>
+		</div>
+
+		<!-- news__content -->
+		<div class="news__content container">
+
+			<div class="news__content-wrapper row">
+				<!-- Колонка 1 -->
+				<div class="news__content-left col-md-5">
+				
+					<div class="news__content-item">
+
+						<div class="img-block">
+
+							<img src="img/forblog/newsmanleft.jpg" alt="мужчина в клечатой рубашке">
+							<a href="">
+								<i class="fa fa-circle fa-behance icon" aria-hidden="true"></i>
+							</a>
+		
+						</div>
+						
+						<div class="news__content-item-text">
+
+							<h1 class="news__content-item-text__header">Top kamla of this year!</h1>
+
+							<p class="news__content-item-text__text clearfix">Ashole uni kamla noy uni VONDU & uni dami pc use kore so unar
+								digayn o dami. Typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+								the 1500s, when an unknown printer took a galley of type and scrambled it
+								to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+								typesetting
+								remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+								containing Lorem
+								Ipsum passages, and more recently with desktop</p>
+							
+								<div class="news__content-item__link">
+								<a href="#">read more</a>
+							</div>
+
+						</div>
+
+					</div>
+				
+				</div>
+				<!-- // Колонка 1 -->
+				
+				<!-- Колонка 2 -->
+				<div class="news_content-right col-md-7">
+				
+					<div class="news__content-item">
+
+						<div class="img-block">
+						
+							<img src="img/forblog/manright.jpg" alt="мужчина в очках">
+							<a href="#">
+								<i class="fa fa-dribbble icon" aria-hidden="true"></i>
+							</a>
+						
+						</div>
+
+						<div class="news__content-item-text">
+							<h1 class="news__content-item-text__header">Specialize in Mobile and Web UI/UX!</h1>
+							<p class="news__content-item-text__text">Kotha sotto blv it or not, is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the
+								industry's standard dummy text. ever. since the 1500s, when an unknown printer took a galley of type and
+								scrambled it to
+								make a type specimen book.</p>
+						</div>
+					</div>
+				
+					<div class="news__content-item">
+
+						<div class="img-block">
+						
+							<img src="img/forblog/mewsgirl.jpg" alt="девушка спиной в шапочке">
+							<a href="#">
+								<i class="fa fa-twitter icon" aria-hidden="true"></i>
+							</a>
+						
+						</div>
+					
+						<div class="news__content-item-text">
+							<h1 class="news__content-item-text__header">Best photo of this month!</h1>
+							<p class="news__content-item-text__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+								industry. Lorem Ipsum has been the industry's standard
+								dummy text. ever. since the 1500s, when an unknown printer took a galley of type and scrambled it to
+								make a type
+								specimen book.</p>
+						</div>
+
+					</div>
+				
+				</div>
+				<!-- //Колонка 2 -->
+
+			</div>
+			
+		</div>
+		<!-- // news_content -->
+
+	</div>
+	<!-- // news -->
+	
+	<!-- footer -->
+	<div class="footer">
+		
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-3 ">
+					<h1 class="footer__logo-title">explore</h1>
+					<p class="footer__logo-description">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+					type and scrambled it to make a type specimen book survived not</p>
+				</div>
+
+				<div class="col-sm-2">
+
+					<div class="footer__menu-title">HELP</div>
+
+					<ul>
+						<li><a href="#">Newsletter</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Get paid</a></li>
+						<li><a href="#">Sign in</a></li>
+						<li><a href="#">Sign up</a></li>
+					</ul>
+
+				</div>
+
+				<div class="col-sm-2">
+
+					<div class="footer__menu-title">Follow</div>
+
+					<ul>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Instagram</a></li>
+						<li><a href="#">Pinterest</a></li>
+						<li><a href="#">Behance</a></li>
+					</ul>
+
+				</div>
+
+				<div class="col-sm-2">
+
+					<div class="footer__menu-title">Explore</div>
+
+					<ul>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Features</a></li>
+					</ul>
+
+				</div>
+
+				<div class="col-sm-3">
+					<div class="footer__menu-title">Sign up</div>
+
+					<div>
+						<div class="footer__signin-form">
+							<label for="footer__signin-form"></label>
+							<input type="email" class="footer__signin-form__field" id="footer__signin-form" 
+								placeholder="JohnDoe@gmail.com">
+						</div>
+						<div class="footer__signin-form">
+							<label for="footer__signin-form"></label>
+							<input type="password" class="footer__signin-form__field" id="footer__signin-form"  placeholder="password">
+						</div>
+
+						<button type="submit" class="footer__button btn btn-outline-secondary">Go!</button>
+
+					</div>
+
+				</div>
+
+			</div>
+			<!-- // row -->
+
+			<div class="row footer__lower">
+				<div class="footer__social-icons">
+					<ul>
+						<li><a class="hexagon" href="#"><i class="fa fa-linkedin"></i> </a> </li>
+						<li><a class="hexagon" href="#"><i class="fa fa-twitter"></i> </a> </li>
+						<li><a class="hexagon" href="#"><i class="fa fa-facebook"></i> </a> </li>
+						<li><a class="hexagon" href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+				<div class="footer__copiright">
+					<span>@Copyright 2015 explore All right reserved</span>
+				</div>
+			</div>
+
+		</div>
+		<!-- // container -->
+
+	</div>
+	<!-- // footer -->
 
 	<!-- Внешние скрипты -->
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
@@ -102,9 +618,7 @@
 	<script src="libs/pagescroll2id/jquery.malihu.PageScroll2id.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="libs/mixitup3/mixitup.min.js"></script>
-	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
-	<script src="libs/jquery/jquery.mousewheel-3.0.6.pack.js"></script>
-	<script src="libs/jquery.validate/jquery.validate.js"></script>
+	<script src="libs/owlcarousel/owl.carousel.js"></script>
 
 	<!-- Мои скрипты -->
 	<script src="js/navigation.js"></script>

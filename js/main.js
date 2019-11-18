@@ -1,75 +1,61 @@
 $(document).ready(function () {
 
+	$("#owl-carusel").owlCarousel({
 
-	//slide2id - плавная прокрутка по ссылкам внутри страницы
-	$("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
-		highlightSelector: "nav a"
+		
+		items: 3,
+		itemsDesktop: [1199, 3],
+		itemsDesktopSmall: [979, 3]
+
+	});
+
+	// Скрипт для показа и скрытия выпадающего меню на смартфонах
+	// Создаем переменые для кнопки и для меню
+	var pull = $('#navigation-toggle');
+	var menu = $('.navigation ul');
+
+	// Описываем событие при нажатии на кнопку
+	$(pull).on("click", function (e) {
+
+		// Отменяем стандартное поведение ссылки в браузере
+		e.preventDefault();
+
+		// Открываем/Скрываем меню
+		menu.slideToggle();
+
+		// Добавляем модификатор --active
+		$(this).toggleClass('navigation__toggle-button--active');
+
 	});
 
 
 
-	// MixItUp - фильтрация работ в портфолио
-	$('#portfolio-projects').mixItUp();
+	// При изменении размера окна, в большую сторону, если меню было скрыто, показываем его
+	// И у кнопки убираем модификатор --active
+	$(window).resize(function () {
+		var w = $(window).width();
+		if (w > 992) {
+			menu.removeAttr('style');
+			pull.removeClass('navigation__toggle-button--active');
+		} else {
 
-
-	// FancyBox - galery
-	$(".fancybox").fancybox({
-		// Default - with fix from scroll to top
-		helpers: {
-			overlay: {
-				locked: false
-			}
 		}
 	});
-	// End of FancyBox - galery
 
+	// Скрываем меню при клике на него на смартфоне и планцете
+	// По клику на ссылку в меню запускаем ф-ю fnstart();
+	$('nav.navigation a').on("click", function () {
+		fnstart();
+	});
 
-	// jQuery Validate JS
-	$("#contact-form").validate({
-		rules: {
-			name: { required: true },
-			email: { required: true, email: true },
-			// skype:  { required: true },
-			// phone:  { required: true },
-			message: { required: true }
-		},
-
-		messages: {
-			name: "Пожалуйста, введите свое имя",
-			email: {
-				required: "Пожалуйста, введите свой email",
-				email: "Email адрес должен быть в формате name@domain.com . Возможно вы ввели email с ошибкой."
-			},
-			message: "Пожалуйста, введите текст сообщения"
-		},
-
-		submitHandler: function (form) {
-			ajaxFormSubmit();
+	// В ф-ии fnstart(); проверяем - если меню открыто (проверяем по наличию класса --active у кнопки pull)
+	// тогда убираем класс модификатор --active у кнопки pull
+	// и сворачиваем/скрываем меню 
+	function fnstart() {
+		if ($("#navigation-toggle").hasClass("navigation__toggle-button--active")) {
+			pull.toggleClass('navigation__toggle-button--active');
+			menu.slideToggle();
 		}
+	};
 
-	})
-
-	// Функция AJAX запроса на сервер
-	function ajaxFormSubmit() {
-		var string = $("#contact-form").serialize(); // Соханяем данные введенные в форму в строку. 
-
-		// Формируем ajax запрос
-		$.ajax({
-			type: "POST", // Тип запроса - POST
-			url: "php/mail.php", // Куда отправляем запрос
-			data: string, // Какие даные отправляем, в данном случае отправляем переменную string
-
-			// Функция если все прошло успешно
-			success: function (html) {
-				$("#contact-form").slideUp(800);
-				$('#answer').html(html);
-			}
-		});
-
-		// Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
-		return false;
-	}
-
-	AOS.init();
-
-}); 
+});
