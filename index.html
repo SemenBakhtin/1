@@ -40,101 +40,114 @@
 	<!-- Header -->
 	<header class="header">
 		<!-- header__navigation -->
-		<nav class="navigation clearfix">
+		<nav class="navigation-wrapper">
+			<div class="container navigation">
 
-			<div class="header__navigation-logo clearfix">
-				<ul>
-					<li class="ex">ex</li>
-					<li class="plore">plore</li>
-				</ul>
-			</div>
-
-			<div id="navigation-toggle" class="navigation__toggle-button">explore</div>
-
-			<div class="navigation-list">
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Mens</a></li>
-					<li><a href="#">Womens</a></li>
-					<li><a href="#">Kids</a></li>
-					<li><a href="#">Blog</a></li>
-				</ul>
-			</div>
-			
-		
-			<div class="header__navigation-busket clearfix">
-				<i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-				<div class="btn-group">
-					<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						My account
-					</button>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<a class="dropdown-item" href="#">Something else here</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Separated link</a>
+				<div class="header__navigation-logo clearfix">
+					<ul>
+						<li class="ex">ex</li>
+						<li class="plore">plore</li>
+					</ul>
+				</div>
+				
+				<div id="navigation-toggle" class="navigation__toggle-button">explore</div>
+				
+				<div class="navigation-list">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Mens</a></li>
+						<li><a href="#">Womens</a></li>
+						<li><a href="#">Kids</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+				</div>
+				
+				
+				<div class="header__navigation-busket">
+					<i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
+					<div class="btn-group">
+						<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							My account
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Separated link</a>
+						</div>
 					</div>
 				</div>
 			</div>
-
 		</nav>
 		<!--//navigation -->
 
 		<!-- header__content -->
 		<div class="header__content">
-			<div class="header__content-tittle">
-				<p>Winter <br> Collection</p>
+			<div class="container">
+				<div class="header__content-tittle">
+					<h1>Winter <br> Collection</h1>
+				</div>
+				<div class="header__content-subtittle">
+					<p>Buy stylish products in our shop!</p>
+				</div>
+				
+				<button type="button" class="btn btn-secondary header__content-button"> 
+					<a href="#">Shop now</a>
+					<i class="fa fa-arrow-right" aria-hidden="true">
+					</i>
+				</button>
 			</div>
-			<div class="header__content-subtittle">
-				<p>Buy stylish products in our shop!</p>
-			</div>
-
-			<button type="button" class="btn btn-outline-secondary header__content-button">
-				Shop now
-				<i class="fa fa-arrow-right" aria-hidden="true">
-				</i>
-			</button>
-
 		</div>
 		<!-- //header__content -->
 	</header>
 	<!-- //header -->
 
-	<!-- products -->
-	<div class="products">
-		<!-- featured-items -->
-		<div class="featured-items">
-			<div class="products-block__header">
-				<h3 class="heading">Featured Items</h3>
-				<p class="heading__subtext">Let’s see featured items!</p>
-			</div>
-			<!-- container -->
-			<div class="container clearfix">
-				<div class="owl-carusel" id="owl-carusel">
+	<!-- featured-items -->
+	<section class="featured-items">
+		<div class="products-block__header">
+			<h3 class="heading">Featured Items</h3>
+			<p class="heading__subtext">Let’s see featured items!</p>
+		</div>
+		<!-- container -->
+		<div class="container">
+			<div class="owl-carusel" id="owl-carusel">
 
-					<!-- card 1 -->
-					<div class="featured-items__card clearfix">
-						<div>
-							<img src="/img/items/bag.png" alt="коричневая сумка мужская">
-						</div>
-						
+				<!-- card 1 -->
+				<div class="featured-items__card clearfix">
+					<div class="featured-items__card-img">
+						<img src="/img/items/bag.png" alt="коричневая сумка мужская">
+					</div>
+
+					<div class="product-block__card-content">
+
 						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
+							<h3>Vaber Jinish Very Stylish</h1>
 						</div>
 
 						<div class="featured-items__card-stars clearfix">
 							<fieldset class="rating">
-								<input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-								<input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-								<input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-								<input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-								<input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-								<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+								<input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
+									title="Awesome - 5 stars"></label>
+								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"
+									title="Pretty good - 4.5 stars"></label>
+								<input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"
+									title="Pretty good - 4 stars"></label>
+								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"
+									title="Meh - 3.5 stars"></label>
+								<input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"
+									title="Meh - 3 stars"></label>
+								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"
+									title="Kinda bad - 2.5 stars"></label>
+								<input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
+									title="Kinda bad - 2 stars"></label>
+								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"
+									title="Meh - 1.5 stars"></label>
+								<input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
+									title="Sucks big time - 1 star"></label>
+								<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"
+									title="Sucks big time - 0.5 stars"></label>
 							</fieldset>
 						</div>
 						<!-- // featured-items__card-stars -->
@@ -142,47 +155,23 @@
 						<p class="product-block__card-price">$ 255</p>
 
 					</div>
-					<!-- // card 1 -->
-		
-					<!-- card 2 -->
-					<div class="featured-items__card clearfix">
+					<!-- //product-block__card-content -->
 
+				</div>	
+				<!-- // card 1 -->
+
+				<!-- card 2 -->
+				<div class="featured-items__card clearfix">
+					<div class="featured-items__card-img">
 						<img src="/img/items/watch.png" alt="часы">
-
-						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
-						</div>
-
-						<div class="featured-items__card-stars clearfix">
-							<fieldset class="rating">
-								<input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-								<input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-								<input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-								<input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-								<input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-								<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
-							</fieldset>
-						</div>
-						<!-- // featured-items__card-stars -->
-
-						<p class="product-block__card-price">$ 255</p>
-
 					</div>
-					<!-- // card 2 -->
 
-					<!-- card 3 -->
-					<div class="featured-items__card clearfix">
-				
-						<img src="/img/items/redbag.png" alt="красная женская сумка">
-				
+					<div class="product-block__card-content">
+
 						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
+							<h3>Vaber Jinish Very Stylish</h1>
 						</div>
-				
+
 						<div class="featured-items__card-stars clearfix">
 							<fieldset class="rating">
 								<input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
@@ -210,37 +199,43 @@
 						<!-- // featured-items__card-stars -->
 
 						<p class="product-block__card-price">$ 255</p>
-				
-					</div>
-					<!-- // card 3 -->
 
-					<!-- card 3 -->
-					<div class="featured-items__card clearfix">
-					
-						<img src="/img/items/shoe.png" alt="чёрные кеды">
-					
+					</div>
+					<!-- //product-block__card-content -->
+
+				</div>
+				<!-- // card 2 -->
+
+				<!-- card 3 -->
+				<div class="featured-items__card clearfix">
+					<div class="featured-items__card-img">
+						<img src="/img/items/redbag.png" alt="красная сумочка">
+					</div>
+				
+					<div class="product-block__card-content">
+				
 						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
+							<h3>Vaber Jinish Very Stylish</h1>
 						</div>
-					
+				
 						<div class="featured-items__card-stars clearfix">
 							<fieldset class="rating">
 								<input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
 									title="Awesome - 5 stars"></label>
-								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"
-									title="Pretty good - 4.5 stars"></label>
+								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half"
+									for="star4half" title="Pretty good - 4.5 stars"></label>
 								<input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"
 									title="Pretty good - 4 stars"></label>
-								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"
-									title="Meh - 3.5 stars"></label>
+								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half"
+									for="star3half" title="Meh - 3.5 stars"></label>
 								<input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"
 									title="Meh - 3 stars"></label>
-								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"
-									title="Kinda bad - 2.5 stars"></label>
+								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half"
+									for="star2half" title="Kinda bad - 2.5 stars"></label>
 								<input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
 									title="Kinda bad - 2 stars"></label>
-								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"
-									title="Meh - 1.5 stars"></label>
+								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half"
+									for="star1half" title="Meh - 1.5 stars"></label>
 								<input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
 									title="Sucks big time - 1 star"></label>
 								<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"
@@ -248,140 +243,261 @@
 							</fieldset>
 						</div>
 						<!-- // featured-items__card-stars -->
-					
+				
 						<p class="product-block__card-price">$ 255</p>
-					
+				
 					</div>
-					<!-- // card 3 -->
+					<!-- //product-block__card-content -->
+				
 				</div>
+				<!-- // card 3 -->
+
+				<!-- card 4 -->
+				<div class="featured-items__card clearfix">
+					<div class="featured-items__card-img">
+						<img src="/img/items/shoe.png" alt="кеды">
+					</div>
+				
+					<div class="product-block__card-content">
+				
+						<div class="product-block__card-tittle">
+							<h3>Vaber Jinish Very Stylish</h1>
+						</div>
+				
+						<div class="featured-items__card-stars clearfix">
+							<fieldset class="rating">
+								<input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
+									title="Awesome - 5 stars"></label>
+								<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half"
+									for="star4half" title="Pretty good - 4.5 stars"></label>
+								<input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"
+									title="Pretty good - 4 stars"></label>
+								<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half"
+									for="star3half" title="Meh - 3.5 stars"></label>
+								<input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"
+									title="Meh - 3 stars"></label>
+								<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half"
+									for="star2half" title="Kinda bad - 2.5 stars"></label>
+								<input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
+									title="Kinda bad - 2 stars"></label>
+								<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half"
+									for="star1half" title="Meh - 1.5 stars"></label>
+								<input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
+									title="Sucks big time - 1 star"></label>
+								<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"
+									title="Sucks big time - 0.5 stars"></label>
+							</fieldset>
+						</div>
+						<!-- // featured-items__card-stars -->
+				
+						<p class="product-block__card-price">$ 255</p>
+				
+					</div>
+					<!-- //product-block__card-content -->
+				
+				</div>
+				<!-- // card 4 -->
+	
+
 			</div>
-			<!-- // container -->
 		</div>
-		<!--// featured-items -->
+		<!-- // container -->
+	</section>
+	<!--// featured-items -->
 
 
-		<!-- products-collections -->
-		<div class="products-collections">
+	<!-- products-collections -->
+	<section class="products-collections">
 
-			<div class="products-block__header">
-				<h3 class="heading">Products Collections</h3>
-				<p class="heading__subtext">Check out popular products in our shop!</p>
+		<div class="products-block__header">
+
+			<h3 class="heading">Products Collections</h3>
+			<p class="heading__subtext">Check out popular products in our shop!</p>
+
+			<ul class="product__collections-filter">
+				<li class="product__collections-filter-item" data-filter=".all"> 
+					all
+				</li>
+				<li class="product__collections-filter-item" data-filter=".mens">
+					mens
+				</li>
+				<li class="product__collections-filter-item" data-filter=".women">
+					women
+				</li>
+				<li class="product__collections-filter-item" data-filter=".kids">
+					kids
+				</li>
+			</ul>
+
+		</div>
+		
+		
+		<!-- container -->
+		<div class="container" id="mixitup">
+
+			<!-- row -->
+			<div class="row clearfix">
+
+				<!-- card 1 -->
+				<div class="col-md-4 mix mens all">
+					<div class="products-collections__card">
+
+						<div class="product-collections__card-img">
+							<img src="img/items/grayjacket.png" alt="серая куртка">
+						</div>
+						
+						<a href="#" class="add-to-card">add to card</a>
+						
+						<div class="product-block__card-content">
+							<div class="product-block__card-tittle">
+								<h3>Vaber Jinish Very Stylish</h3>
+							</div>
+							<div class="heading__subtext--productcollections heading__subtext">Valo lagla kinen na kinla poth mapen </div>
+							<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- // card 1 -->
+
+				<!-- card 2 -->
+				<div class="col-md-4 mix women all">
+					<div class="products-collections__card">
+				
+						<div class="product-collections__card-img">
+							<img src="img/items/redbag.png" alt="крассная сумочка">
+						</div>
+				
+						<a href="#" class="add-to-card">add to card</a>
+				
+						<div class="product-block__card-content">
+							<div class="product-block__card-tittle">
+								<h3>Vaber Jinish Very Stylish</h3>
+							</div>
+							<div class="heading__subtext--productcollections heading__subtext">Valo lagla kinen na kinla poth mapen </div>
+							<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+						</div>
+				
+					</div>
+				
+				</div>
+				<!-- // card 2 -->
+
+				<!-- card 3 -->
+				<div class="col-md-4 mix women mens all">
+					<div class="products-collections__card">
+				
+						<div class="product-collections__card-img">
+							<img src="img/items/bluejacket.png" alt="синяя куртка">
+						</div>
+				
+						<a href="#" class="add-to-card">add to card</a>
+				
+						<div class="product-block__card-content">
+							<div class="product-block__card-tittle">
+								<h3>Vaber Jinish Very Stylish</h3>
+							</div>
+							<div class="heading__subtext--productcollections heading__subtext">Valo lagla kinen na kinla poth mapen </div>
+							<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+						</div>
+				
+					</div>
+				
+				</div>
+				<!-- // card 3 -->
+
 			</div>
+			<!-- // row -->
+
+
+			<!-- row -->
+			<div class="row clearfix">
 			
-			<ul class="products-block__header">
-				
-				<ul class="product__collections-filter">
-					<li class="product__collections-filter-item">
-						all
-					</li>
-					<li class="product__collections-filter-item">
-						mens
-					</li>
-					<li class="product__collections-filter-item">
-						women
-					</li>
-					<li class="product__collections-filter-item">
-						kids	
-					</li>
-				</ul>
-
-			<!-- container -->
-			<div class="container">
-
-				<!-- row -->
-				<div class="row clearfix">
-					<!-- card 1 -->
-					<div class="products-collections__card col-md-4 clearfix">
-						<img src="img/items/grayjacket.png" alt="серая куртка">
-						<a href="#" class="add-to-card">add to card</a>
-						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
+				<!-- card 1 -->
+				<div class="col-md-4 mix kids mens all">
+					<div class="products-collections__card">
+			
+						<div class="product-collections__card-img">
+							<img src="img/items/watchyellow.png" alt="часы с оранжевым ремешком">
 						</div>
-						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
-						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
-					</div>
-					<!-- // card 1 -->
-
-					<!-- card 2 -->
-					<div class="products-collections__card col-md-4 clearfix ">
-						<img src="img/items/redbag.png" alt="крассная женская сумка">
+			
 						<a href="#" class="add-to-card">add to card</a>
-						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
+			
+						<div class="product-block__card-content">
+							<div class="product-block__card-tittle">
+								<h3>Vaber Jinish Very Stylish</h3>
+							</div>
+							<div class="heading__subtext--productcollections heading__subtext">Valo lagla kinen na kinla poth mapen </div>
+							<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
 						</div>
-						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
-						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+			
 					</div>
-					<!-- // card 2 -->
-
-					<!-- card 3 -->
-					<div class="products-collections__card col-md-4 clearfix ">
-						<img src="img/items/bluejacket.png" alt="синяя куртка">
-						<a href="#" class="add-to-card">add to card</a>
-						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
-						</div>
-						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
-						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
-					</div>
-					<!-- // card 3 -->
-
+			
 				</div>
-				<!-- // row -->
-
-				<!-- row -->
-				<div class="row clearfix">
-					<!-- card 1 -->
-					<div class="products-collections__card col-md-4 clearfix ">
-						<img src="img/items/watchyellow.png" alt="часы с рыжим ремешком">
-						<a href="#" class="add-to-card">add to card</a>
-						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
+				<!-- // card 1 -->
+			
+				<!-- card 2 -->
+				<div class="col-md-4 mix mens all">
+					<div class="products-collections__card">
+			
+						<div class="product-collections__card-img">
+							<img src="img/items/belt.png" alt="ремень">
 						</div>
-						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
-						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
-					</div>
-					<!-- // card 1 -->
-				
-					<!-- card 2 -->
-					<div class="products-collections__card col-md-4 clearfix ">
-						<img src="img/items/belt.png" alt="коричневый ремень">
+			
 						<a href="#" class="add-to-card">add to card</a>
-						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
+			
+						<div class="product-block__card-content">
+							<div class="product-block__card-tittle">
+								<h3>Vaber Jinish Very Stylish</h3>
+							</div>
+							<div class="heading__subtext--productcollections heading__subtext">Valo lagla kinen na kinla poth mapen </div>
+							<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
 						</div>
-						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
-						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+			
 					</div>
-					<!-- // card 2 -->
-				
-					<!-- card 3 -->
-					<div class="products-collections__card col-md-4 clearfix ">
-						<img src="img/items/shoe.png" alt="черные кеды">
-						<a href="#" class="add-to-card">add to card</a>
-						<div class="product-block__card-tittle">
-							<h1>Vaber Jinish Very Stylish</h1>
-						</div>
-						<div class="heading__subtext--productcollections">Valo lagla kinen na kinla poth mapen </div>
-						<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
-					</div>
-					<!-- // card 3 -->
-				
+			
 				</div>
-				<!-- // row -->
-				<div class="row justify-content-center">
-					<button type="button" class="btn btn-outline-secondary product-collections__button">More</button>
+				<!-- // card 2 -->
+			
+				<!-- card 3 -->
+				<div class="col-md-4 mix kids all">
+					<div class="products-collections__card">
+			
+						<div class="product-collections__card-img">
+							<img src="img/items/shoe.png" alt="кеды">
+						</div>
+			
+						<a href="#" class="add-to-card">add to card</a>
+			
+						<div class="product-block__card-content">
+							<div class="product-block__card-tittle">
+								<h3>Vaber Jinish Very Stylish</h3>
+							</div>
+							<div class="heading__subtext--productcollections heading__subtext">Valo lagla kinen na kinla poth mapen </div>
+							<div class="product-block__card-price product-block__card-price--productcollections">$28</div>
+						</div>
+			
+					</div>
+			
 				</div>
-
+				<!-- // card 3 -->
+			
 			</div>
-			<!-- // container -->
+			<!-- // row -->
+
+			<div class="row justify-content-center">
+				<button type="button" class="btn btn-outline-secondary product-collections__button">More</button>
+			</div>
+
 		</div>
-		<!-- // products-collections -->
-	</div>
-	<!--// products -->
+		<!-- // container -->
+	</section>
+	<!-- // products-collections -->
+	
 	 
 	<!-- subscribe-form -->
-	<div class="subscribe-form">
+	<section class="subscribe-form">
 
 		<div class="subscribe-form__header">
 			<div class="heading">Subscribe To Our Newsletter</div>
@@ -391,7 +507,7 @@
 
 		<div class="input-group mb-3">
 
-			<div class="subscribe-form__button">
+			<form class="subscribe-form__button">
 
 				<input type="text" class="form-control subscribe-form__button-text" placeholder="Enter your email address" aria-label="user email"
 					aria-describedby="button-addon2">
@@ -400,15 +516,15 @@
 					<button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
 				</div>
 
-			</div>
+			</form>
 		</div>
 
-	</div>
+	</section>
 	<!-- // subscribe-form -->
 
 	<!-- news -->
 
-	<div class="news">
+	<section class="news">
 		
 		<div class="products-block__header">
 			<h3 class="heading">Latest New’s</h3>
@@ -427,7 +543,7 @@
 						<div class="img-block">
 
 							<img src="img/forblog/newsmanleft.jpg" alt="мужчина в клечатой рубашке">
-							<a href="">
+							<a href="#">
 								<i class="fa fa-circle fa-behance icon" aria-hidden="true"></i>
 							</a>
 		
@@ -435,7 +551,7 @@
 						
 						<div class="news__content-item-text">
 
-							<h1 class="news__content-item-text__header">Top kamla of this year!</h1>
+							<h3 class="news__content-item-text__header">Top kamla of this year!</h3>
 
 							<p class="news__content-item-text__text clearfix">Ashole uni kamla noy uni VONDU & uni dami pc use kore so unar
 								digayn o dami. Typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
@@ -472,7 +588,7 @@
 						</div>
 
 						<div class="news__content-item-text">
-							<h1 class="news__content-item-text__header">Specialize in Mobile and Web UI/UX!</h1>
+							<h3 class="news__content-item-text__header">Specialize in Mobile and Web UI/UX!</h3>
 							<p class="news__content-item-text__text">Kotha sotto blv it or not, is simply dummy text of the printing and
 								typesetting industry. Lorem Ipsum has been the
 								industry's standard dummy text. ever. since the 1500s, when an unknown printer took a galley of type and
@@ -493,7 +609,7 @@
 						</div>
 					
 						<div class="news__content-item-text">
-							<h1 class="news__content-item-text__header">Best photo of this month!</h1>
+							<h3 class="news__content-item-text__header">Best photo of this month!</h3>
 							<p class="news__content-item-text__text">Lorem Ipsum is simply dummy text of the printing and typesetting
 								industry. Lorem Ipsum has been the industry's standard
 								dummy text. ever. since the 1500s, when an unknown printer took a galley of type and scrambled it to
@@ -511,11 +627,11 @@
 		</div>
 		<!-- // news_content -->
 
-	</div>
+	</section>
 	<!-- // news -->
 	
 	<!-- footer -->
-	<div class="footer">
+	<footer class="footer">
 		
 		<div class="container">
 			<div class="row">
@@ -571,20 +687,18 @@
 				<div class="col-sm-3">
 					<div class="footer__menu-title">Sign up</div>
 
-					<div>
+					<form>
 						<div class="footer__signin-form">
-							<label for="footer__signin-form"></label>
 							<input type="email" class="footer__signin-form__field" id="footer__signin-form" 
 								placeholder="JohnDoe@gmail.com">
 						</div>
 						<div class="footer__signin-form">
-							<label for="footer__signin-form"></label>
 							<input type="password" class="footer__signin-form__field" id="footer__signin-form"  placeholder="password">
 						</div>
 
 						<button type="submit" class="footer__button btn btn-outline-secondary">Go!</button>
 
-					</div>
+					</form>
 
 				</div>
 
@@ -608,7 +722,7 @@
 		</div>
 		<!-- // container -->
 
-	</div>
+	</footer>
 	<!-- // footer -->
 
 	<!-- Внешние скрипты -->
@@ -621,7 +735,7 @@
 	<script src="libs/owlcarousel/owl.carousel.js"></script>
 
 	<!-- Мои скрипты -->
-	<script src="js/navigation.js"></script>
+
 	<script src="js/main.js"></script>
 
 </body>
@@ -629,4 +743,4 @@
 </html>
 
 
-Тест 2
+
