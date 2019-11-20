@@ -359,10 +359,6 @@ body {
 .subscribe-form__button-button {
   float: left;
 }
-.news__content-wrapper {
-  padding-top: 35px;
-  padding-bottom: 15px;
-}
 @media (min-width: 768px) {
   .news__content-wrapper {
     padding-bottom: 60px;
@@ -563,6 +559,8 @@ h1 {
   text-decoration: none;
 }
 .news__content-wrapper {
+  padding-top: 35px;
+  padding-bottom: 15px;
   /*Social Icons in NEWS BLOCK*/
 }
 .news__content-wrapper .icon {
@@ -810,7 +808,7 @@ h1 {
   right: 15px;
   width: 25px;
   height: 20px;
-  background: url('/img/icons/navigation-icon.png');
+  background: url('img/icons/navigation-icon.png');
   background-repeat: no-repeat;
   background-position: 0 0;
 }
