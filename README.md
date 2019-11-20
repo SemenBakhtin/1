@@ -1,9 +1,28 @@
-**Online store template**
+# **Online store template**
 
 It is an online store template created by me from a PSD wich I found online.
 
-I used bootstrap, html5, css3, semantic tags, mixitup, jquery.
+## What inside
 
-I is made responsive for smartphones, tablets and desctops.
+- optimization for smartfones, tablets and desctop
 
-[Click this link to see this project in browser](https://semenbakhtin.github.io/1/)
+- semantic optimisation for search machines
+
+- card carusel in features items block
+
+- card filter in product block
+
+- smooth effects over mouse cover and scroll
+
+## Technologies I used
+
+- HTML5
+- CSS3
+- jQuery
+- JS
+- Less
+- Libs Mixitup, OwlCarusel
+
+
+
+### [Click this link to see this project in browser](https://semenbakhtin.github.io/1/)
