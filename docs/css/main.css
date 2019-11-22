@@ -822,9 +822,6 @@ h1 {
   font-weight: 700;
   color: #fff;
 }
-.navigation__toggle-button--active style {
-  display: block;
-}
 .navigation__toggle-button--active:focus,
 .navigation__toggle-button--active:active {
   background-color: #495479;
@@ -835,15 +832,8 @@ h1 {
     display: none;
   }
 }
-.navigation-list {
-  display: none;
-}
-@media (min-width: 992px) {
-  .navigation-list {
-    display: block;
-  }
-}
 .navigation-list ul {
+  display: none;
   margin: 0;
   padding: 0;
   list-style-type: none;
