@@ -822,6 +822,9 @@ h1 {
   font-weight: 700;
   color: #fff;
 }
+.navigation__toggle-button--active style {
+  display: block;
+}
 .navigation__toggle-button--active:focus,
 .navigation__toggle-button--active:active {
   background-color: #495479;
@@ -830,6 +833,14 @@ h1 {
 @media (min-width: 992px) {
   .navigation__toggle-button--active {
     display: none;
+  }
+}
+.navigation-list {
+  display: none;
+}
+@media (min-width: 992px) {
+  .navigation-list {
+    display: block;
   }
 }
 .navigation-list ul {
