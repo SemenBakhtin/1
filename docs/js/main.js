@@ -9,26 +9,6 @@ $(document).ready(function () {
 
 	});
 
-	// Скрипт для показа и скрытия выпадающего меню на смартфонах
-	// Создаем переменые для кнопки и для меню
-	var pull = $('#navigation-toggle');
-	var menu = $('.navigation ul');
-
-	// Описываем событие при нажатии на кнопку
-	$(pull).on("click", function (e) {
-
-		// Отменяем стандартное поведение ссылки в браузере
-		e.preventDefault();
-
-		// Открываем/Скрываем меню
-		menu.slideToggle();
-
-		// Добавляем модификатор --active
-		$(this).toggleClass('navigation__toggle-button--active');
-
-	});
-
-
 
 	// При изменении размера окна, в большую сторону, если меню было скрыто, показываем его
 	// И у кнопки убираем модификатор --active
@@ -42,22 +22,22 @@ $(document).ready(function () {
 		}
 	});
 
-	// Скрываем меню при клике на него на смартфоне и планцете
-	// По клику на ссылку в меню запускаем ф-ю fnstart();
-	$('nav.navigation a').on("click", function () {
-		fnstart();
+	// Анимированная иконка
+	var menulink = $('.menu-link');
+	var pull = $('#navigation-toggle');
+	var menu = $('.navigation ul');
+	
+	menulink.click(function () {
+
+	menulink.toggleClass('active');
+	menu.slideToggle('active');
+
+	pull.toggleClass('navigation__toggle-button--active');
+	return false;
+
 	});
 
-	// В ф-ии fnstart(); проверяем - если меню открыто (проверяем по наличию класса --active у кнопки pull)
-	// тогда убираем класс модификатор --active у кнопки pull
-	// и сворачиваем/скрываем меню 
-	function fnstart() {
-		if ($("#navigation-toggle").hasClass("navigation__toggle-button--active")) {
-			pull.toggleClass('navigation__toggle-button--active');
-			menu.slideToggle();
-		}
-	};
-
+	// Фильтр для блока карточек
 	var mixer = mixitup('#mixitup');
 
 });
