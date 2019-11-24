@@ -106,12 +106,12 @@ body {
     top: 50%;
   }
 }
-.header__content-tittle h1 {
+.header__content-title h1 {
   font-weight: 900;
   font-size: 50px;
   color: #33ccff;
 }
-.header__content-subtittle {
+.header__content-subtitle {
   margin-bottom: 28px;
   font-weight: 400;
   font-size: 23px;
@@ -150,7 +150,7 @@ body {
 .product-block__card-content {
   padding: 15px;
 }
-.product-block__card-tittle h3 {
+.product-block__card-title h3 {
   margin: 0;
   padding-bottom: 15px;
   color: #495479;
